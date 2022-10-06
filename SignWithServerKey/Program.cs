@@ -5,10 +5,11 @@ using Lacuna.RestPki.Client;
 using System.IO;
 using System.Security.Cryptography;
 using System.Security.Cryptography.X509Certificates;
+using System.Net;
 
 namespace SignWithServerKey{
 	internal class Program{
-		public const string RestPKIAccessToken = "";
+		public const string RestPKIAccessToken = "6vQ7ZL8UCH1aDBrpuUXc3bdKJJo7ijMWbh90y-5R8h9G5Xc9Ut2-Ma8g7RFq6i87XeP2koaeisd85o5WZGUf4YmYVinAtQLKZXMfVQOVGayVu5EXfKHuR-b1Stp32bFaYa8uGcopuDy5eYFu56ESm5-j-32uS62CUHtKGn7Yn8hWzZrVDJHFD0I8FSbyVo7JqbPCeXvwTrigJiQJQ76MWe-EcQCZcBeZshIGWygDEve91AogfY5NLJ6s627xJJbCl0U0cd2oLJGfZAsF-FXHN8Wkw7rFiZKEmOcaqlu8b_85hTvv4N-eewhnGRNdM8mMdRC_-KIEh1QBWiJawiTgCKhJIfz_PW7ugieOicmmtyFZMMztiUj6cXHBHR7_l7CxCGo4pclUubkPDoqZuHZk8LIcUJcfrUd15c8s9FYXrD_x_MsdmUS2nG637y8L_gSUgg-aZKr0go6zyuR0TQEuea-FiHatFkzT3pJDfPHpiYqQZn2RHxlDmEiDZjbBkdtUpYIKCQ";
 		public const string FileToSignName = "Sample.pdf";
 		public const string FileSignedName = "SampleSigner.pdf";
 		public const string SignatureImage = "PdfStamp.png";
@@ -24,6 +25,16 @@ namespace SignWithServerKey{
 		
 
 		static void Main(string[] args) {
+		// Configure proxy	
+		//const string proxyHost = "http://sample_host";
+		//const int proxyPort = 1234;
+		//const string proxyUsername = "sample_username";
+		//const string proxyPassword = "sample_password";
+		//var proxy = new WebProxy(proxyHost, proxyPort)
+		//{
+		//	Credentials = new NetworkCredential(proxyUsername, proxyPassword),
+		//};
+		//WebRequest.DefaultWebProxy = proxy;
 			AssinaturaRestPKI();
 		}
 
